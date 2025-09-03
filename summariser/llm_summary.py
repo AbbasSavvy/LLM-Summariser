@@ -1,9 +1,10 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from langchain.llms import HuggingFaceHub
-from langchain.chains import LLMChain
+from langchain_community.llms import HuggingFaceHub
 from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
+
 
 
 project_root = Path(__file__).parent.parent
