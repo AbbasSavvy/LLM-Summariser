@@ -1,7 +1,8 @@
+from langchain.text_splitter import CharacterTextSplitter
 import requests
 from bs4 import BeautifulSoup
 
-def get_article(url: str, max_chars: int = 20000) -> str:
+def get_article(url: str, chunk_size: int = 500,  chunk_overlap: int = 50):
     """
     Scrape all paragraphs from a webpage and return as a single string.
     Limits the text to max_chars for LLM input.
@@ -21,4 +22,8 @@ def get_article(url: str, max_chars: int = 20000) -> str:
     paragraphs = soup.find_all("p")
     text = " ".join([p.get_text() for p in paragraphs])
 
-    return text[:max_chars]
+    splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    chunks = splitter.split_text(text)
+
+    return chunks
+
