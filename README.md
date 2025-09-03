@@ -15,7 +15,7 @@ This is a Python-based web application that scrapes the content of a web article
 
 Before you begin, ensure you have the following installed:
 
-- Python 3.8+
+- Python 3.10+
 
 You will also need an **API token** from Hugging Face to use their models.
 
