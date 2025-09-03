@@ -26,10 +26,10 @@ if not HF_API_KEY:
 
 
 llm = HuggingFaceHub(
-    repo_id="google/flan-t5-small",  # free model
-    model_kwargs={"temperature": 0, "max_length": 300},
+    repo_id="facebook/bart-large-cnn",  # <- switch here
     huggingfacehub_api_token=HF_API_KEY,
-    task="summarization"
+    task="summarization",
+    model_kwargs={"temperature": 0, "max_length": 300}
 )
 
 template = """Summarize the following article in 3-5 sentences:
