@@ -41,7 +41,7 @@ prompt = PromptTemplate(template=template, input_variables=["text"])
 chain = LLMChain(llm=llm, prompt=prompt)
 
 
-def get_sumamry(text: str) -> str:
+def get_summary(text: str) -> str:
     """
     Summarize the provided text using the Hugging Face LLM.
     """
