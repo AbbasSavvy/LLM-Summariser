@@ -23,8 +23,8 @@ You will also need an **API token** from Hugging Face to use their models.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/AbbasSavvy/web-llm-summariser.git
-    cd web-llm-summariser
+    git clone https://github.com/AbbasSavvy/LLM-Summariser.git
+    cd LLM-Summariser
     ```
 
 2.  **Create and activate a virtual environment:**
