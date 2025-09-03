@@ -1,9 +1,7 @@
 import streamlit as st
 from scraper.scraper import get_article
-from summariser.hierarchical import hierarchical_summary_safe
-from summariser.llm_summary import get_summary
 import summariser.hierarchical
-
+from summariser import hierarchical
 
 st.title("Web Article Summarizer")
 
@@ -15,8 +13,8 @@ if url:
     st.subheader("Original Text")
     st.write(chunk_text)
 
-    final_summary = hierarchical_summary_safe(chunks, delay=1)
 
+    final_summary = hierarchical.multi_level_summary(chunks)
     st.subheader("Summary")
     st.write(final_summary)
 

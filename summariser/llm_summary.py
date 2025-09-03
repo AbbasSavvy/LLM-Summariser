@@ -48,3 +48,21 @@ def get_summary(text: str) -> str:
     Summarize the provided text using the Hugging Face LLM.
     """
     return chain.run(text)
+
+
+final_sum_prompt_template = """
+
+Summarize the following, keep contextual data, include details:
+
+{text}
+
+Summary:
+
+"""
+
+new_prompt = PromptTemplate(template=final_sum_prompt_template, input_variables=["text"])
+new_chain = LLMChain(llm=llm, prompt=new_prompt)
+
+
+def get_final_summ(text: str):
+    return new_chain.run(text)
