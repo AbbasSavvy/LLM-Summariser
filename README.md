@@ -23,7 +23,7 @@ You will also need an **API token** from Hugging Face to use their models.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/AbbasSavvy/web-llm-summariser.git](https://github.com/AbbasSavvy/web-llm-summariser.git)
+    git clone https://github.com/AbbasSavvy/web-llm-summariser.git
     cd web-llm-summariser
     ```
 
