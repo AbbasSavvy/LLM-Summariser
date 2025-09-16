@@ -1,6 +1,6 @@
 # Web Article Summarizer
 
-This is a Python-based web application that scrapes the content of a web article from a given URL and generates a concise summary using a Large Language Model (LLM). The application uses a hierarchical summarization approach to handle long articles that exceed the LLM's token limit.
+This is a Python-based web application that scrapes the content of a web article from a given URL and generates a concise summary using a Large Language Model (Facebook's Bart). The application uses a hierarchical summarization approach to handle long articles that exceed the LLM's token limit.
 
 ## Features
 
