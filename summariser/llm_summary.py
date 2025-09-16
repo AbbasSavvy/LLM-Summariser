@@ -27,7 +27,7 @@ if not HF_API_KEY:
 
 
 llm = HuggingFaceHub(
-    repo_id="facebook/bart-large-cnn",  # <- switch here
+    repo_id="facebook/bart-large-cnn",  
     huggingfacehub_api_token=HF_API_KEY,
     task="summarization",
     model_kwargs={"temperature": 0, "max_length": 300}
